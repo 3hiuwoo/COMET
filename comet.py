@@ -1,5 +1,6 @@
 import torch
 import torch.nn.functional as F
+from tqdm import tqdm
 from torch import nn
 from torch.utils.data import TensorDataset, DataLoader
 import numpy as np
@@ -123,7 +124,7 @@ class COMET:
             n_epoch_iters = 1
             
             interrupted = False
-            for x, y in train_loader:
+            for x, y in tqdm(train_loader):
                 # count by iterations
                 if n_iters is not None and self.n_iters >= n_iters:
                     interrupted = True

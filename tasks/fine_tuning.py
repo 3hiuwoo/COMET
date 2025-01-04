@@ -1,6 +1,7 @@
 import torch
 import torch.nn as nn
 from torch.utils.data import TensorDataset, DataLoader
+from tqdm import tqdm
 import torch.nn.functional as F
 import sklearn
 
@@ -38,9 +39,7 @@ def finetune_fit(model, X_train, y_train, X_test, y_test, batch_size=128, finetu
     model.train()
 
     # (n_samples,) is mapped to a target of shape (n_samples, n_classes).
-    train_dataset = TensorDataset(torch.from_numpy(X_train).to(torch.float),
-                                  F.one_hot(torch.from_numpy(y_train).to(torch.long),
-                                            num_classes=num_classes).to(torch.float))
+    train_dataset = TensorDataset(torch.from_numpy(X_train).to(torch.float), torch.from_numpy(y_train).to(torch.long))
     train_loader = DataLoader(train_dataset, batch_size=batch_size, shuffle=True, drop_last=False)
 
     optimizer = torch.optim.AdamW(model.parameters(), lr=finetune_lr)
@@ -52,7 +51,7 @@ def finetune_fit(model, X_train, y_train, X_test, y_test, batch_size=128, finetu
     model.n_epochs = 1
 
     for epoch in range(finetune_epochs):
-        for x, y in train_loader:
+        for x, y in tqdm(train_loader):
             x, y = x.to(device), y.to(device)
             optimizer.zero_grad()
 
@@ -77,7 +76,7 @@ def finetune_fit(model, X_train, y_train, X_test, y_test, batch_size=128, finetu
     return epoch_loss_list, epoch_f1_list
 
 
-def finetune_predict(model, X_test, y_test, batch_size=128, num_classes=2, device='cuda'):
+def finetune_predict(model, X_test, y_test, batch_size=128, num_classes=4, device='cuda'):
     """ test the fine-tuned model
 
     Args:
@@ -93,8 +92,7 @@ def finetune_predict(model, X_test, y_test, batch_size=128, num_classes=2, devic
     """
     device = torch.device(device)
 
-    test_dataset = TensorDataset(torch.from_numpy(X_test).to(torch.float),
-                                 F.one_hot(torch.from_numpy(y_test).to(torch.long), num_classes=num_classes).to(torch.float))
+    test_dataset = TensorDataset(torch.from_numpy(X_test).to(torch.float), F.one_hot(torch.from_numpy(y_test).to(torch.long), num_classes=num_classes).to(torch.float))
     test_loader = DataLoader(test_dataset, batch_size=batch_size, shuffle=True, drop_last=False)
 
     org_training = model.training
@@ -102,7 +100,7 @@ def finetune_predict(model, X_test, y_test, batch_size=128, num_classes=2, devic
 
     sample_num = len(X_test)
     y_pred_prob_all = torch.zeros((sample_num, num_classes))
-    y_target_prob_all = torch.zeros((sample_num, num_classes))
+    y_target_prob_all = torch.zeros(sample_num, num_classes)
 
     with torch.no_grad():
         for index, (x, y) in enumerate(test_loader):

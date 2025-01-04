@@ -1,0 +1,22 @@
+Linear evaluation for validation set
+ {'Accuracy': 0.5782312925170068, 'Precision': 0.6512169714936392, 'Recall': 0.6705207400266933, 'F1': 0.6330114271809446, 'AUROC': np.float64(0.8594332094723623), 'AUPRC': np.float64(0.6967008772369782)}
+Linear evaluation for test set
+ {'Accuracy': 0.5730624529721595, 'Precision': 0.6704560522305336, 'Recall': 0.6700840005893743, 'F1': 0.6441107212759124, 'AUROC': np.float64(0.8633589889530663), 'AUPRC': np.float64(0.7080020714491646)}
+
+Finetune for 1.0 fraction of validation set
+Finetune for 1.0 fraction of validation set
+Finetune for 1.0 fraction of validation set
+Finetune for 1.0 fraction of validation set
+Finetune for 1.0 fraction of validation set
+Finetune for 1.0 fraction of validation set
+Finetune for 1.0 fraction of validation set
+{'Accuracy': 0.6550387596899225, 'Precision': 0.7232628342673869, 'Recall': 0.7413566970853911, 'F1': 0.7131705077440981, 'AUROC': np.float64(0.8868654486162434), 'AUPRC': np.float64(0.7717115866289654)}
+Finetune for 1.0 fraction of test set
+{'Accuracy': 0.6786305492851769, 'Precision': 0.767482487372711, 'Recall': 0.7684018238373735, 'F1': 0.7418143136632527, 'AUROC': np.float64(0.8984601510034262), 'AUPRC': np.float64(0.7952860070604557)}
+
+Finetune for 1.0 fraction of validation set
+Finetune for 1.0 fraction of validation set
+{'Accuracy': 0.6502926752096188, 'Precision': 0.7535699525855414, 'Recall': 0.7272672306890989, 'F1': 0.7062905591964295, 'AUROC': np.float64(0.9022453209638782), 'AUPRC': np.float64(0.7960094678573981)}
+Finetune for 1.0 fraction of test set
+{'Accuracy': 0.671030850263356, 'Precision': 0.7814041946869885, 'Recall': 0.7552879564861079, 'F1': 0.7346390120600477, 'AUROC': np.float64(0.9255148982195629), 'AUPRC': np.float64(0.8388610255854196)}
+
