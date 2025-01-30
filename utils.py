@@ -137,7 +137,7 @@ def batch_shuffle_feature_label(X, y, batch_size=128):
     return X_shuffled, y_shuffled
 
 
-def split_data_label(X_trial, y_trial, sample_timestamps, overlapping):
+def split_data_label(X_trial, y_trial, sample_timestamps, overlapping=0):
     """ split a batch of time-series trials into samples and adding trial ids to the label array y
 
     Args:

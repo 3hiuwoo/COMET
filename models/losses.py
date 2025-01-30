@@ -12,10 +12,10 @@ def contrastive_loss(z1, z2, loss_func, id=None, hierarchical=False, factor=1.0)
     if not hierarchical:
         if id is not None:
             # pass patient and trial loss function
-            return loss_func(z1, z2, id)
+            return loss_func(z1, z2, id) * factor
         else:
             # pass sample and observation loss function
-            return loss_func(z1, z2)
+            return loss_func(z1, z2) * factor
     # enable hierarchical loss
     else:
         loss = torch.tensor(0., device=z1.device)

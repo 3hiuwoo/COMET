@@ -1,0 +1,35 @@
+Scratch for 1.0 fraction of validation set 50e
+{'Accuracy': 0.6663502610346465, 'Precision': 0.741419586092818, 'Recall': 0.733889445589535, 'F1': 0.7144732318735205, 'AUROC': np.float64(0.8903213234480074), 'AUPRC': np.float64(0.7651368991318298)}
+Scratch for 1.0 fraction of test set
+{'Accuracy': 0.7054928517682468, 'Precision': 0.7801455820678143, 'Recall': 0.7686391943418358, 'F1': 0.7531731001808545, 'AUROC': np.float64(0.9198792088077316), 'AUPRC': np.float64(0.821027226245842)}
+
+Scratch for 0.1 fraction of validation set 50e
+{'Accuracy': 0.6912672045562411, 'Precision': 0.7364817400253658, 'Recall': 0.7508406725372908, 'F1': 0.7338046504537267, 'AUROC': np.float64(0.8968417172240278), 'AUPRC': np.float64(0.7792295888710854)}
+Finetune for 0.1 fraction of test set
+{'Accuracy': 0.7328818660647103, 'Precision': 0.775114637719691, 'Recall': 0.7876587691899148, 'F1': 0.7725099562774833, 'AUROC': np.float64(0.9199233199715424), 'AUPRC': np.float64(0.8194557446370575)}
+
+Scratch for 0.01 fraction of validation set 50e
+{'Accuracy': 0.49058693244739754, 'Precision': 0.5389360183326711, 'Recall': 0.5379326442096426, 'F1': 0.4885312145213399, 'AUROC': np.float64(0.8101361343178543), 'AUPRC': np.float64(0.5551364662310256)}
+Scratch for 0.01 fraction of test set
+{'Accuracy': 0.5270127915726109, 'Precision': 0.5684464427277727, 'Recall': 0.5614586829864778, 'F1': 0.51523591329254, 'AUROC': np.float64(0.8328602778825269), 'AUPRC': np.float64(0.5852582844830129)}
+
+Linear evaluation for validation set
+ {'Accuracy': 0.6097136529030217, 'Precision': 0.6874732535874124, 'Recall': 0.6950126219115234, 'F1': 0.6607285963722529, 'AUROC': np.float64(0.8700065961903005), 'AUPRC': np.float64(0.7223348428217173)}
+Linear evaluation for test set
+ {'Accuracy': 0.6507148231753198, 'Precision': 0.7346651245159589, 'Recall': 0.731755348016465, 'F1': 0.7090424688607886, 'AUROC': np.float64(0.8960418320195189), 'AUPRC': np.float64(0.771659627963219)}
+
+Finetune for 1.0 fraction of validation set
+{'Accuracy': 0.6737857933871223, 'Precision': 0.7288201662460709, 'Recall': 0.7480031986240467, 'F1': 0.7263857142411956, 'AUROC': np.float64(0.8924880517122683), 'AUPRC': np.float64(0.7722099718779674)}
+Finetune for 1.0 fraction of test set
+{'Accuracy': 0.716553799849511, 'Precision': 0.7777365098062172, 'Recall': 0.7820854092697594, 'F1': 0.7683939714737686, 'AUROC': np.float64(0.9081227393969282), 'AUPRC': np.float64(0.8002509089238791)}
+
+Finetune for 0.1 fraction of validation set
+{'Accuracy': 0.6585192216421453, 'Precision': 0.6469536612762503, 'Recall': 0.7060604048259685, 'F1': 0.6648939624570264, 'AUROC': np.float64(0.8814259393109701), 'AUPRC': np.float64(0.7427574774678101)}
+Finetune for 0.1 fraction of test set
+{'Accuracy': 0.7384499623777276, 'Precision': 0.7175900988935394, 'Recall': 0.7612834991216229, 'F1': 0.7325421689814592, 'AUROC': np.float64(0.906299524360762), 'AUPRC': np.float64(0.8043901222975961)}
+
+Finetune for 0.01 fraction of validation set
+{'Accuracy': 0.655671570953963, 'Precision': 0.6396511847107534, 'Recall': 0.7047315590355806, 'F1': 0.6574937154464634, 'AUROC': np.float64(0.8760864069593662), 'AUPRC': np.float64(0.7225022711898729)}
+Finetune for 0.01 fraction of test set
+{'Accuracy': 0.7285929270127915, 'Precision': 0.7026495223187369, 'Recall': 0.7531107731763386, 'F1': 0.7178825694136245, 'AUROC': np.float64(0.8983124072702126), 'AUPRC': np.float64(0.7774774765786128)}
+
